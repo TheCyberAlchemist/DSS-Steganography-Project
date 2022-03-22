@@ -104,7 +104,9 @@ if __name__ == "__main__":
 
 def decrypt_main(key,image_path):
 	cipher_text = img2message()
-	decrypted_text = d
-	ecrypt(cipher_text,key)[:-3]
+	print(cipher_text[:-3])
+	a= cipher_text[:-3]
+	decrypted_text = decrypt(a,key)
+	decrypt(a,key)
 	print("Decrypted text: ",decrypted_text)
 	return decrypted_text
