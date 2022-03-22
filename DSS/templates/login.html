@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>-->
+	<link rel="stylesheet" type="text/css" href="{{static ('util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{static ('main.css')}}">
+<!--===============================================================================================-->
+<script type="text/javascript">
+
+
+function check_info()
+
+{
+
+var username=document.getElementById("username").value;
+var password=document.getElementById("password").value;
+
+    if((username == "javal" && password == "password") || (username == "dev" && password == "password"))
+
+      {
+		window.location = "{{url('home')}}";
+        return false;
+      }
+
+      else
+      { 
+        alert("Invalid Username or Password"); 
+      }
+
+  } 
+</script>
+</head>
+<body>
+	
+	
+	<div class="container-login100" style="background-image: url('https://wallpaperbat.com/img/357664-esa-esa-practices-cybersecurity.jpg');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form class="login100-form validate-form" method="post" >
+				<span class="login100-form-title p-b-37">
+					Sign In
+				</span>
+				<div class="wrap-input100 validate-input" data-validate="Enter username or email">
+					<input class="input100" type="text" name="username" id="username" placeholder="Username">
+					<span class="focus-input100"></span>
+				</div>
+				<br>
+				<div class="wrap-input100 validate-input" data-validate = "Enter password">
+					<input class="input100" type="password" name="pass" id="password" placeholder="Password">
+					<span class="focus-input100"></span>
+				</div>
+				<br>
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn" onclick="return check_info()" />
+						Login
+					</button>
+				</div>			
+			</form>	
+		</div>
+	</div>
+</body>
+</html>

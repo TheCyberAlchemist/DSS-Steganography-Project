@@ -1,0 +1,10 @@
+<h1> This is decrypt. </h1>
+
+<form method="POST" enctype="multipart/form-data">
+	{{csrf_input}}
+	Key::<input type="text" name="key">
+	<br><br>
+	<input type="file" name="file">
+	<br><br>
+	<input type="submit" value="Upload">
+</form>
