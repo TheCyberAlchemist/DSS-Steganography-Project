@@ -81,6 +81,7 @@ def img2message(input_input_image_name = "media/encrypt/image.png"):
 	for i in range(10):
 		for j in range(img.size[1]):
 			pix = img.getpixel((i,j))
+			pix = pix[:3]
 			r,g,b = pix
 			r = messageToBinary(r)
 			g = messageToBinary(g)

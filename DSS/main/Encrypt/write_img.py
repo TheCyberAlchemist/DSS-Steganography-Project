@@ -57,6 +57,7 @@ def message2img(binary_message,input_input_image_name="media/image/image.png",ou
 		for i in range(img.size[0]):
 			for j in range(img.size[1]):
 				pix = img.getpixel((i,j))
+				pix = pix[:3]
 				r,g,b = pix
 				pix = list(pix)
 				r = messageToBinary(r)
