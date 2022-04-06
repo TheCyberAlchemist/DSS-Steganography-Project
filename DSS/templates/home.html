@@ -5,9 +5,9 @@
 	<title>Welcome</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>-->
 	<link rel="stylesheet" type="text/css" href="{{static ('util.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{static ('main.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{static ('style.css')}}">
 <style type="text/css">
 td{
 	padding: 10px;
@@ -19,10 +19,8 @@ td{
 </style>
 </head>
 <body>
+<div class="login-box">
 
-<div class="container-login100" style="background-image: url('https://wallpaperbat.com/img/147096-network-security-solutions.jpg');">
-	<div class=" p-l-55 p-r-55 p-t-80 p-b-30" style="margin-left: -500px;">
-		<div class="table">
 		<table>
 			<tr>
 				<td class="i1">
@@ -30,7 +28,7 @@ td{
 					<img src="{{static ('encrypt.png')}}" style="width: 100px;">
 					</a>
 				</td>
-				<td class="i2" style="padding-left:200px;">
+				<td class="i2" style="padding-left:70px;">
 					<a href="{{url('decrypt')}}">
 					<img src="{{static ('decrypt.png')}}" style="width: 100px;">
 					</a>
@@ -42,7 +40,7 @@ td{
 						Encryption
 					</h3>
 				</td>
-				<td style="padding-left:200px;">
+				<td style="padding-left:70px;">
 					<h3 style="color: white;">
 						Decryption
 					</h3>
@@ -51,8 +49,7 @@ td{
 				</td>
 			</tr>
 		</table>
-		</div>
-	</div>
+
 </div>
 </body>
 </html>
