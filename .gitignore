@@ -1,3 +1,4 @@
 # add the folder DSS_project in gitignore
-
-DSS_Project/
+*.pyc
+*.po
+*.mo
