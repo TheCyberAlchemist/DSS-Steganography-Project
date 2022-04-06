@@ -10,11 +10,10 @@
 <div class="login-box">
   <form action method="post" enctype="multipart/form-data">
     {{csrf_input}}
-    <div class="user-box">
-      
-      <input type="text" name="key" id="caption">
-      <label for="caption">Key</label>
-    </div>
+    {% set key = 1 %}
+
+  <input type="hidden" name="key" id="caption" value="{{key}}" >
+    
 
   <div class="user-box">
     <input type="file" name="file" id="file" required="required" onchange="return fileValidation()" multiple="multiple"/>

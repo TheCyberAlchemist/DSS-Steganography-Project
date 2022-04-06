@@ -70,6 +70,7 @@ def show_decryption(request):
 	if request.method == "POST":
 		key = request.POST.get("key")
 		file = request.FILES.get("file")
+		print(key,type(key))
 		with open(f'media/encrypt/image.png', 'wb+') as destination:
 			for chunk in file.chunks():
 				destination.write(chunk)
