@@ -22,11 +22,15 @@ def BinaryToString(binary):
 
 
 def gethash(input_input_image_name = "media/encrypt/image.png"):
+    """
+    getting encrypted image
+    read the hash data appeneded at last
+    then if hash not found then return False else return hash value
+    """
     with open(input_input_image_name,"rb") as f:
         hash = f.read()
         if hash[-1:] != b"\x82":
-            print(hash[-1:])  
-            print("hi")  
+            print(hash[-1:])    
             b = hash[-64:]
             other_file = hash[:-64]
             #print(b)
@@ -34,7 +38,6 @@ def gethash(input_input_image_name = "media/encrypt/image.png"):
                 del_hash = f.write(other_file)
                 return b
         else:
-            print("Hi2")
             return False
 
 def checkhash(hash, input_input_image_name = "media/encrypt/image.png"):
@@ -141,7 +144,7 @@ if __name__ == "__main__":
 def decrypt_main(key,image_path):
     getHash = gethash()
     if getHash == False:
-        return "Your message is altered"
+        return "The message is erased ..."
     else:
         check = checkhash(getHash)
         if check == True:
@@ -153,4 +156,4 @@ def decrypt_main(key,image_path):
             print("Decrypted text: ",decrypted_text)
             return decrypted_text
         else:
-            return "Your message is altered"
+            return "You have a breach ❗❗❗❗"
